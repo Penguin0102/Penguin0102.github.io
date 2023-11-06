@@ -13,22 +13,26 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/11/06/hello-world/"/>
+    <link rel="canonical" href="http://example.com/2023/11/06/个人博客搭建/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+        <meta name="description" content="第一篇博客打算整理一下创建和部署个人博客的过程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/11/06/hello-world/index.html">
+<meta property="og:title" content="个人博客搭建（Hexo+GitHub Actions自动部署)">
+<meta property="og:url" content="http://example.com/2023/11/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+<meta property="og:description" content="第一篇博客打算整理一下创建和部署个人博客的过程">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-11-06T13:53:30.201Z">
-<meta property="article:modified_time" content="2023-11-06T13:53:30.201Z">
+<meta property="og:image" content="http://example.com/images/blog1-3.png">
+<meta property="og:image" content="http://example.com/images/blog1-1.png">
+<meta property="og:image" content="http://example.com/images/blog1-2.png">
+<meta property="article:published_time" content="2023-11-06T14:26:55.882Z">
+<meta property="article:modified_time" content="2023-11-06T14:27:26.736Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/blog1-3.png">
     
     
     <!--- Icon Part-->
@@ -40,7 +44,7 @@
     
     <title>
         
-            Hello World -
+            个人博客搭建（Hexo+GitHub Actions自动部署) -
         
         Penguin&#39;s blog
     </title>
@@ -244,7 +248,11 @@
 
         <div class="article-title">
             
-                <h1 class="article-title-regular">Hello World</h1>
+                
+                
+                <img src="/images/blog1.jpg" alt="个人博客搭建（Hexo+GitHub Actions自动部署)" class="max-w-none"/>
+                
+                <h1 class="article-title-cover">个人博客搭建（Hexo+GitHub Actions自动部署)</h1>
             
             </div>
             
@@ -264,15 +272,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-11-06 21:53:30</span>
-        <span class="mobile">2023-11-06 21:53:30</span>
+        <span class="desktop">2023-11-06 22:26:55</span>
+        <span class="mobile">2023-11-06 22:26:55</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-11-06 21:53:30</span>
-            <span class="mobile">2023-11-06 21:53:30</span>
+            <span class="desktop">2023-11-06 22:27:26</span>
+            <span class="mobile">2023-11-06 22:27:26</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -283,12 +291,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>75 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.2k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
         </span>
     
     
@@ -307,19 +315,98 @@
 
 
         <div class="article-content markdown-body">
-            <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+            <p>第一篇博客打算整理一下创建和部署个人博客的过程</p>
+<span id="more"></span>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+<h2 id="Hexo博客搭建"><a href="#Hexo博客搭建" class="headerlink" title="Hexo博客搭建"></a>Hexo博客搭建</h2><h3 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h3><blockquote>
+<p><a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。  </p>
+</blockquote>
+<h3 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h3><ul>
+<li><p>安装 <a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/en" >Node.js <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>  </p>
+<p>进入Node.js官方下载页面后会发现有两个安装版本：LTS和Current。LTS(Long-Term-Support)长期支持版本，稳定性和可靠性较好，而Current是最新开发版本，包含了最新的功能，但是存在不稳定等其他潜在问题，如果想要尝试新的功能或者开发一些实验性新功能可以下载该版本。  </p>
+<p>搭建个人博客建议下载LTS，如果下载很慢或失败，可以检查一下网络或者尝试其他下载方式: <a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/en/download" >https://nodejs.org/en/download <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>下载完成之后就是配置了，这里有一篇非常详细的有关Node.js的安装和配置的详细文章 -&gt; <a class="link"   target="_blank" rel="noopener" href="http://t.csdnimg.cn/xD2wc" >http://t.csdnimg.cn/xD2wc <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 真的强推！！</p>
+</li>
+<li><p>安装 <a class="link"   target="_blank" rel="noopener" href="https://git-scm.com/downloads" >Git <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>    </p>
+<p>检验是否安装成功  </p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+<p>安装成功之后进行基础配置  </p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;用户名称&quot;</span></span><br><span class="line">git config --global user.email 邮箱地址</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+<p>检查一下是否配置成功  </p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name</span><br><span class="line">git config --global user.email</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><ul>
+<li><p>使用npm安装hexo  </p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="建站及本地运行"><a href="#建站及本地运行" class="headerlink" title="建站及本地运行"></a>建站及本地运行</h3><ul>
+<li><p>执行以下命令，Hexo在指定文件夹中新建所需要的文件</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>生成静态文件</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>简写命令</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>启动服务器</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></div>  
+
+<p>然后访问 <a class="link"   target="_blank" rel="noopener" href="http://localhost:4000/" >http://localhost:4000 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 就可以看到自己搭建的博客啦</p>
+</li>
+</ul>
+<h3 id="配置及主题设置"><a href="#配置及主题设置" class="headerlink" title="配置及主题设置"></a>配置及主题设置</h3><ul>
+<li><p>配置</p>
+<p>在Hexo博客目录下的_config.yml文件中修改配置，如网站标题，网站描述，你的名字等等，具体如何更改可以仔细阅读_config.yml文件中的注释</p>
+</li>
+<li><p>主题设置</p>
+<p>Hexo内置了许多优质主题，可以在 <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/themes/" >https://hexo.io/themes/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 中挑选自己喜欢的主题，并且根据该主题提供的文档安装并配置主题</p>
+<p>建议选择介绍比较详细，功能比较齐全的主题，如 NexT，Fluid，Redefine 等等</p>
+<p>不要忘了在Hexo博客目录下的_config.yml文件中修改主题,否则自己选的主题无法呈现</p>
+</li>
+</ul>
+<h2 id="GitHub-Actions自动部署"><a href="#GitHub-Actions自动部署" class="headerlink" title="GitHub Actions自动部署"></a>GitHub Actions自动部署</h2><h3 id="准备仓库"><a href="#准备仓库" class="headerlink" title="准备仓库"></a>准备仓库</h3><p>  私有仓库 blog : 存放Hexo项目的源代码<br>  公开仓库 <strong>用户名</strong>.github.io ：存放生成的静态文件<br>  <strong>注意</strong>：用户名必须与GitHub用户昵称相同</p>
+<p>  GitHub Actions 自动部署的过程：当 blog 仓库中的内容有更新时，自动将生成的静态文件push到 <strong>用户名</strong>.github.io 仓库</p>
+<h3 id="获取Token"><a href="#获取Token" class="headerlink" title="获取Token"></a>获取Token</h3><p>  GitHub头像-&gt;Settings-&gt;Developer settings-&gt;Personal access tokens-&gt;Tokens(classic)-&gt;Generate new token(classic)  </p>
+<p>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/blog1-3.png"
+                     
+                ><br>  Select scopes 勾选repo和workflow  </p>
+<p>  <strong>注意</strong>：创建的token只会显示一次，记得存好，否则只能重新创建</p>
+<h3 id="配置部署密钥"><a href="#配置部署密钥" class="headerlink" title="配置部署密钥"></a>配置部署密钥</h3><ul>
+<li><p>生成部署密钥</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -f github-deploy-key</span><br></pre></td></tr></table></figure></div> 
+
+<p>一直回车直到密钥生成结束  </p>
+<p>然后会发现生成了两个文件,github-deploy-key(私钥)和github-deploy-key.pub(公钥),位置在C盘下Users目录下的.ssh目录</p>
+</li>
+<li><p>配置密钥</p>
+<ol>
+<li>将github-deploy-key(私钥)配置到blog仓库<br>  在 blog 仓库中:Settings-&gt;Secrets and variables-&gt;Actions-&gt;New repository secret<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/blog1-1.png"
+                     
+                >  </li>
+<li>将github-deploy-key(私钥)配置到blog仓库<br> 在 <strong>用户名</strong>.github.io 仓库中:Settings-&gt;Deploy keys-&gt;Add deploy key<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/blog1-2.png"
+                     
+                ></li>
+</ol>
+</li>
+</ul>
+<h3 id="编写GitHub-Actions的配置文件"><a href="#编写GitHub-Actions的配置文件" class="headerlink" title="编写GitHub Actions的配置文件"></a>编写GitHub Actions的配置文件</h3><p>  在存放Hexo项目的源代码文件夹下创建.github&#x2F;workflows&#x2F;deploy.yml文件</p>
+<div class="highlight-container" data-rel="Yml"><figure class="iseeu highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Autodeploy</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">release:</span></span><br><span class="line">    <span class="attr">types:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">published</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">检查分支</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">ref:</span> <span class="string">master</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">安装</span> <span class="string">Node</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">&quot;12.x&quot;</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">安装</span> <span class="string">Hexo</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          export TZ=&#x27;Asia/Shanghai&#x27;</span></span><br><span class="line"><span class="string">          npm install hexo-cli -g</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">缓存</span> <span class="string">Hexo</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v1</span></span><br><span class="line">        <span class="attr">id:</span> <span class="string">cache</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;runner.OS&#125;&#125;-$&#123;&#123;hashFiles(&#x27;**/package-lock.json&#x27;)&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">安装依赖</span></span><br><span class="line">        <span class="attr">if:</span> <span class="string">steps.cache.outputs.cache-hit</span> <span class="type">!=</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          npm install --save</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">生成静态文件</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          hexo clean</span></span><br><span class="line"><span class="string">          hexo generate</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">部署到Github</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">JamesIves/github-pages-deploy-action@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">token:</span> <span class="comment"># 填入自己存好的token</span></span><br><span class="line">          <span class="attr">repository-name:</span> <span class="comment"># 格式为 GitHub用户昵称/公开仓库昵称</span></span><br><span class="line">          <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 分支名</span></span><br><span class="line">          <span class="attr">folder:</span> <span class="string">public</span></span><br><span class="line">          <span class="attr">commit-message:</span> <span class="string">&quot;$<span class="template-variable">&#123;&#123; github.event.head_commit.message &#125;&#125;</span> Updated By Github Actions&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>  配置文件内容参考链接 -&gt;  安知鱼：<a class="link"   target="_blank" rel="noopener" href="https://blog.anheyu.com/posts/asdx.html" >使用 Github Action 自动部署 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>  </p>
+<p>  接着可以发布一篇新博客来检验部署是否成功：在 <strong>用户名</strong>.github.io 仓库中:Actions-&gt;Deployments</p>
+<p>  到此为止个人博客的创建和部署就完成啦</p>
 
         </div>
 
@@ -327,18 +414,18 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> Hello World</li>
+        <li><strong>Title:</strong> 个人博客搭建（Hexo+GitHub Actions自动部署)</li>
         <li><strong>Author:</strong> penguin</li>
         <li><strong>Created at
-                :</strong> 2023-11-06 21:53:30</li>
+                :</strong> 2023-11-06 22:26:55</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2023-11-06 21:53:30
+                    :</strong> 2023-11-06 22:27:26
             </li>
         
         <li>
-            <strong>Link:</strong> https://penguin0102.github.io/2023/11/06/hello-world/
+            <strong>Link:</strong> https://penguin0102.github.io/2023/11/06/个人博客搭建/
         </li>
         <li>
             <strong>
@@ -362,21 +449,21 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2023/11/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/11/06/hello-world/"
                         >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">个人博客搭建（Hexo+GitHub Actions自动部署)</span>
-                                <span class="post-nav-item">Prev posts</span>
+                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </span>
                         </a>
                     </div>
-                
                 
             </div>
         
@@ -434,8 +521,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">Hello World</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <div class="page-title">个人博客搭建（Hexo+GitHub Actions自动部署)</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA"><span class="nav-text">Hexo博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFHexo"><span class="nav-text">什么是Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E6%8F%90"><span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%99%E5%8F%8A%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C"><span class="nav-text">建站及本地运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE"><span class="nav-text">配置及主题设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-Actions%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="nav-text">GitHub Actions自动部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E4%BB%93%E5%BA%93"><span class="nav-text">准备仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96Token"><span class="nav-text">获取Token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E9%83%A8%E7%BD%B2%E5%AF%86%E9%92%A5"><span class="nav-text">配置部署密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E5%86%99GitHub-Actions%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">编写GitHub Actions的配置文件</span></a></li></ol></li></ol>
 
     </div>
 </div>
