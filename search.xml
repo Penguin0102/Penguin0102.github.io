@@ -1,8 +1,367 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++笔记</title>
+    <url>/2023/11/12/2-C++%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>虽然暑假的时候已经快速入门了，但是发现自己的基础不牢，现在跟着学校的课程重新学习，感觉把之前很多不理解的坑都填上了。以下记录自己的收获。</p>
+<span id="more"></span>
+
+<h2 id="十进制小数转二进制"><a href="#十进制小数转二进制" class="headerlink" title="十进制小数转二进制"></a>十进制小数转二进制</h2><p>小数部分乘2，取得出的积的整数部分，然后继续乘2，继续取积的整数部分，直到小数部分为0为止，最后顺序连接取出的整数部分</p>
+<p>例如0.125</p>
+<table>
+<thead>
+<tr>
+<th align="left">计算过程</th>
+<th align="left">整数部分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0.125*2=0.25</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">0.25*2=0.5</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">0.5*2</td>
+<td align="left">1</td>
+</tr>
+</tbody></table>
+<p>得到的二进制为0.001</p>
+<p>注意：不是所有的十进制小数都能精确转化为对应的二进制小数</p>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><h3 id="整型常量"><a href="#整型常量" class="headerlink" title="整型常量"></a>整型常量</h3><p>八进制整数。在常数的开头加一个0.如020表示八进制数20  </p>
+<p>十六进制整数。在常数的开头加一个数字0和一个字母X(或x)。如0x20表示十六进制数20。</p>
+<h2 id="常用库"><a href="#常用库" class="headerlink" title="常用库"></a>常用库</h2><h3 id="cmath"><a href="#cmath" class="headerlink" title="cmath"></a>cmath</h3><table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">sqrt(x)</td>
+<td align="left">计算x的平方根</td>
+</tr>
+<tr>
+<td align="left">fabs(x)</td>
+<td align="left">对x(浮点型或整型)取绝对值</td>
+</tr>
+<tr>
+<td align="left">abs(x)</td>
+<td align="left">对x(整型)取绝对值</td>
+</tr>
+<tr>
+<td align="left">exp(x)</td>
+<td align="left">返回<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.157ex" height="1.553ex" role="img" focusable="false" viewBox="0 -675.5 953.5 686.5"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(499,363) scale(0.707)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g></g></g></g></svg></mjx-container></td>
+</tr>
+<tr>
+<td align="left">sin(x)</td>
+<td align="left">返回sinx的值</td>
+</tr>
+<tr>
+<td align="left">pow(x,y)</td>
+<td align="left">返回<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.266ex" height="1.553ex" role="img" focusable="false" viewBox="0 -675.5 1001.5 686.5"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mi" transform="translate(605,363) scale(0.707)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container></td>
+</tr>
+</tbody></table>
+<h3 id="iomanip"><a href="#iomanip" class="headerlink" title="iomanip"></a>iomanip</h3><table>
+<thead>
+<tr>
+<th align="left">控制符</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">dec</td>
+<td align="left">设置数值基数为10(十进制decimal)</td>
+</tr>
+<tr>
+<td align="left">hex</td>
+<td align="left">设置数值基数为16(十六进制hexadecimal)，且字母默认为小写</td>
+</tr>
+<tr>
+<td align="left">oct</td>
+<td align="left">设置数值基数为8(八进制octal)</td>
+</tr>
+<tr>
+<td align="left">setfill(c)</td>
+<td align="left">设置填充字符c</td>
+</tr>
+<tr>
+<td align="left">setprecision(n)</td>
+<td align="left">设置<strong>浮点数</strong>的精度。以一般十进制小数输出时，n表示有效位数。以fixed和scientific形式输出时，n表示小数位数</td>
+</tr>
+<tr>
+<td align="left">setw(n)</td>
+<td align="left">设置字段宽度位n位(setwidth)</td>
+</tr>
+<tr>
+<td align="left">setiosflags(ios::fixed)</td>
+<td align="left">设置<strong>浮点数</strong>以固定小数位数显示</td>
+</tr>
+<tr>
+<td align="left">setiosflags(ios::scientific)</td>
+<td align="left">设置<strong>浮点数</strong>以科学计数法显示</td>
+</tr>
+<tr>
+<td align="left">setiosflags(ios::left)</td>
+<td align="left">输出数据左对齐</td>
+</tr>
+<tr>
+<td align="left">setiosflags(ios::right)</td>
+<td align="left">输出数据右对齐</td>
+</tr>
+<tr>
+<td align="left">setiosflags(ios::uppercase)</td>
+<td align="left">数据以十六进制输出时，字母以大写形式显示</td>
+</tr>
+<tr>
+<td align="left">setiosflags(ios::lowercase)</td>
+<td align="left">数据以十六进制输出时，字母以小写形式显示</td>
+</tr>
+<tr>
+<td align="left">setiosflags(ios::showpos)</td>
+<td align="left">显输出正数时带’+’号</td>
+</tr>
+</tbody></table>
+<p>特别注意：  </p>
+<ol>
+<li><p>setprecision(n)设置的是浮点数的精度，因此对整型不起作用，例如<code>cout&lt;&lt;serprecision(3)&lt;&lt;2</code>,输出结果仍然为2。setprecision和fixed一起用的时候也是如此，因为fixed的作用对象同样也是浮点数</p>
+</li>
+<li><p>setprecision(n)对浮点数进行设置精度时，输出会自动抹去末尾的0，从而导致实际输出的精度与设置的精度不符合，例如<code>cout&lt;&lt;setprecision(3)&lt;&lt;2.1</code>,我们设想应该输出2.10，但实际会把末尾的0抹去，输出2.1。但是若fixed和setprecision连用就不会自动抹零，输出的就是2.10。</p>
+</li>
+</ol>
+<h3 id="cstring"><a href="#cstring" class="headerlink" title="cstring"></a>cstring</h3><table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">strlen(s)</td>
+<td align="left">返回字符串的长度，不包括串终结符’\0’</td>
+</tr>
+<tr>
+<td align="left">strcpy(s1,s2)</td>
+<td align="left">将s2的内容复制到s1中，会覆盖s1中相应的字符。s2可以是字符数组名或者字符常量</td>
+</tr>
+<tr>
+<td align="left">strcat(s1,s2)</td>
+<td align="left">将s2的内容连接到s1内容的后面。s2可以是字符数组名或者字符常量</td>
+</tr>
+<tr>
+<td align="left">strcmp(s1,s2)</td>
+<td align="left">比较s1和s2两个字符串的大小。若s1大于s2，返回1；若s1等于s2，返回0；若s1小于s2，返回-1；</td>
+</tr>
+</tbody></table>
+<p>strcpy的实现代码：</p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">char</span> a[<span class="number">200</span>],b[<span class="number">200</span>];</span><br><span class="line">    cin.<span class="built_in">getline</span>(a,<span class="number">200</span>);</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(b[i++]=a[i]);<span class="comment">//等价于while(b[i]=a[i])i++;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>strcmp的实现代码:</p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">char</span> a[<span class="number">200</span>],b[<span class="number">200</span>];</span><br><span class="line">    cin.<span class="built_in">getline</span>(a,<span class="number">200</span>);</span><br><span class="line">    cin.<span class="built_in">getline</span>(b,<span class="number">200</span>);</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(a[i]&amp;&amp;b[i]&amp;&amp;a[i]==b[i])i++;<span class="comment">//比较紧凑的写法</span></span><br><span class="line">    <span class="keyword">if</span>(a[i]-b[i]&gt;<span class="number">0</span>)</span><br><span class="line">        cout&lt;&lt;a&lt;&lt;<span class="string">"大于"</span>&lt;&lt;b&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a[i]-b[i]==<span class="number">0</span>) </span><br><span class="line">        cout&lt;&lt;a&lt;&lt;<span class="string">"等于"</span>&lt;&lt;b&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        cout&lt;&lt;a&lt;&lt;<span class="string">"小于"</span>&lt;&lt;b&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+
+<h2 id="常用ASCII值"><a href="#常用ASCII值" class="headerlink" title="常用ASCII值"></a>常用ASCII值</h2><table>
+<thead>
+<tr>
+<th align="left">字符</th>
+<th align="left">ASCII值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0</td>
+<td align="left">48</td>
+</tr>
+<tr>
+<td align="left">A</td>
+<td align="left">65</td>
+</tr>
+<tr>
+<td align="left">a</td>
+<td align="left">97</td>
+</tr>
+<tr>
+<td align="left">\0(串终结符)</td>
+<td align="left">0</td>
+</tr>
+</tbody></table>
+<h2 id="合法转义表达"><a href="#合法转义表达" class="headerlink" title="合法转义表达"></a>合法转义表达</h2><table>
+<thead>
+<tr>
+<th align="left">字符形式</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">\</td>
+<td align="left">反斜杠字符”"</td>
+</tr>
+<tr>
+<td align="left">'</td>
+<td align="left">单引号</td>
+</tr>
+<tr>
+<td align="left">"</td>
+<td align="left">双引号</td>
+</tr>
+<tr>
+<td align="left">\0</td>
+<td align="left">串终结符</td>
+</tr>
+<tr>
+<td align="left">\ddd</td>
+<td align="left">显示该八进制数值所代表的字符(d为占位符)，如’\56’,八进制56对应十进制46，查看ASCII表，对应字符’.’</td>
+</tr>
+<tr>
+<td align="left">\xhh</td>
+<td align="left">显示该十六进制，字母大小写不区分(h为占位符)，如’\x56’,对应字符’V’</td>
+</tr>
+</tbody></table>
+<p>转义字符虽然由多个字符组成，但只代表一个字符。这是因为编译系统在找到’'时会继续找它后面的字符，最终将这个整体处理为一个字符，所以它只占1字节</p>
+<p>为了更好的理解转义字符，判断该字符串占几个字节:”a\xA\n\011a\xabcd”</p>
+<p>答案为9。’a’ , ‘\xA’ , ‘\n’ , ‘\011’ , ‘a’ , ‘\xab’ , ‘c’ , ‘d’ , <strong>‘\0’(串终结符)</strong></p>
+<h2 id="各种运算符及表达式"><a href="#各种运算符及表达式" class="headerlink" title="各种运算符及表达式"></a>各种运算符及表达式</h2><h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&gt;&gt;</td>
+<td align="left">将数值对应的二进制向左移动n位，如9&gt;&gt;2,5对应的二进制为1001，向左移动2位变成10，10对应的十进制为2，所以结果为2。若数值为十进制，则结果与该数值整除<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.279ex" height="1.528ex" role="img" focusable="false" viewBox="0 -675.5 1007.3 675.5"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mi" transform="translate(533,363) scale(0.707)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>相同</td>
+</tr>
+<tr>
+<td align="left">&lt;&lt;</td>
+<td align="left">将数值对应的二进制向右移动n位。若数值为十进制，则结果与该数值乘<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.279ex" height="1.528ex" role="img" focusable="false" viewBox="0 -675.5 1007.3 675.5"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mi" transform="translate(533,363) scale(0.707)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>相同</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">按位与</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">按位异或(不同为真，相同为假)</td>
+</tr>
+<tr>
+<td align="left">~</td>
+<td align="left">按位取反</td>
+</tr>
+</tbody></table>
+<p>疑惑：取反操作会对符号位也取反吗</p>
+<details class="blue" data-header-exclude=""><summary><i class="fa-solid fa-chevron-right"></i>按位与的应用 </summary>
+              <div class="content">
+              <p>用于判断二进制数的某一位是0还是1<br>如001001，让这个二进制和000001与，得到000001，则说明最低位为1。还是这个二进制数，和000010与，得到000000，说明从右数第二位是0</p>
+              </div>
+            </details>
+
+<h3 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h3><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">表达式<span class="number">1</span>?表达式<span class="number">2</span>:表达式<span class="number">3</span>;</span><br></pre></td></tr></table></figure></div>
+
+<p>我觉得可以等价为</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式<span class="number">1</span>){</span><br><span class="line">    表达式<span class="number">2</span>;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">else</span>{</span><br><span class="line">    表达式<span class="number">3</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>但是显然这里用if-else就显得比较复杂</p>
+<h3 id="赋值运算符和赋值表达式"><a href="#赋值运算符和赋值表达式" class="headerlink" title="赋值运算符和赋值表达式"></a>赋值运算符和赋值表达式</h3><p>赋值表达式：变量=表达式</p>
+<p>赋值运算符左侧的标识符为左值，右侧的标识符为右值。</p>
+<details class="blue" data-header-exclude=""><summary><i class="fa-solid fa-chevron-right"></i>左值的要求 </summary>
+              <div class="content">
+              <p>目前的理解是，左值必须是可以取地址的，可以改变值的。</p><p>形如表达式(a+b)的不能做左值，常变量也不能做左值。</p><p>a++也不能，但是++a可以。a++操作会先将a的值放入编译器自动分配的临时变量中,而这个临时变量,是无法做取地址操作的，所以不可以做左值。而++a是先对a进行自增操作，然后新的a作为左值，这是符合左值的要求的 </p>
+              </div>
+            </details>
+
+<p>赋值表达式的值为左值的值，即被赋值的变量的值</p>
+<p>因此注意，if(<strong>a=3</strong>) 是一个永真条件，而if(<strong>a=0</strong>) 是一个永假条件</p>
+<p>如<code>cout&lt;&lt;(a=3)</code></p>
+<p>结果：a被赋值为3，输出3；(完成了赋值和输出的双重功能)</p>
+<h3 id="逗号表达式"><a href="#逗号表达式" class="headerlink" title="逗号表达式"></a>逗号表达式</h3><p>表达式1,表达式2,……,表达式n;</p>
+<p>优先级最低</p>
+<p>表达式的值为表达式n的值;</p>
+<h3 id="短路"><a href="#短路" class="headerlink" title="短路"></a>短路</h3><p><code>int a=2;</code></p>
+<p>当代码中出现</p>
+<p><code>a++||3</code></p>
+<p>由于3代表是真，逻辑运算符为或，有真即真，所以不用再看另一边是真或假，那么a++的操作将被短路，不执行，a的值仍然是2。</p>
+<p>但若将3改成0</p>
+<p><code>a++||0</code></p>
+<p>由于0代表是假，该表达式的结果由另一边决定，所以a++操作将被执行，那么a的值改变，为3。</p>
+<h2 id="控制结构"><a href="#控制结构" class="headerlink" title="控制结构"></a>控制结构</h2><h3 id="switch-case"><a href="#switch-case" class="headerlink" title="switch-case"></a>switch-case</h3><p>在执行switch语句时，根据switch表达式找到与之匹配的case子句，就从此case子句开始执行下去，不再做判断</p>
+<p>所以，如果不想从此case子句开始执行下去，不再做判断，那么就要在每个case子句中加break</p>
+<p>default分支可以放在case的任意顺序</p>
+<h3 id="do-while"><a href="#do-while" class="headerlink" title="do-while"></a>do-while</h3><p>与while相比最大的区别就是，do-while一定会执行一次循环体内的内容，而while可以一次都不执行</p>
+<p>常用于放在开头检验键盘输入内容是否合法，若不合法，重新输入</p>
+<h3 id="不断获取键盘输入值"><a href="#不断获取键盘输入值" class="headerlink" title="不断获取键盘输入值"></a>不断获取键盘输入值</h3><p>while(cin&gt;&gt;n)或者for(int i=0;cin&gt;&gt;n;)</p>
+<p>当输入流正常时，cin的值为真。</p>
+<h2 id="字符数组及字符串"><a href="#字符数组及字符串" class="headerlink" title="字符数组及字符串"></a>字符数组及字符串</h2><h3 id="字符数组的初始化"><a href="#字符数组的初始化" class="headerlink" title="字符数组的初始化"></a>字符数组的初始化</h3><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c[<span class="number">4</span>]={<span class="string">'a'</span>,<span class="string">'b'</span>};</span><br></pre></td></tr></table></figure></div>
+
+<p>若花括号中提供的字符个数大于数组长度，则按语法错误处理。若小于数组长度，其余元素自动定义为空字符(即’\0’)</p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c[]={<span class="string">'a'</span>,<span class="string">'b'</span>};</span><br></pre></td></tr></table></figure></div>
+
+<p>使用这种方法初始化，系统会自动根据初值个数确定数组长度。如上面的例子，数组的长度就为2</p>
+<p>注意：这种初始化方式后面不会自动加’\0’</p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c[<span class="number">2</span>]={};</span><br><span class="line"><span class="type">char</span> a[<span class="number">2</span>]={<span class="string">'\0'</span>};</span><br><span class="line"><span class="type">char</span> a[<span class="number">2</span>]={<span class="number">0</span>};</span><br></pre></td></tr></table></figure></div>
+
+<p>这样两种初始化，c和a数组里面的元素都是串终结符’\0’（若c和a是二维的也同样适用）</p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> n;</span><br><span class="line">cin&gt;&gt;n;</span><br><span class="line"><span class="type">char</span> a[n];</span><br></pre></td></tr></table></figure></div>
+
+<p>这种初始化严格来说是不合法的，目前我学习到的定义数组的一般形式为<strong>类型名</strong>  <strong>数组名</strong>**[常量表达式]**，而n并不是一个常量，所以不合法，但是我在vscode中用这种方式去初始化数组代码是可以跑起来的，所以，我目前还不是很理解</p>
+<h3 id="C风格字符串"><a href="#C风格字符串" class="headerlink" title="C风格字符串"></a>C风格字符串</h3><p>为了测定字符数组中字符串的实际长度，C++规定了一个“字符串结束标志”，以字符’\0’代表。也就是说，<strong>遇到字符’\0’就表示字符串到此结束，由它前面的字符组成有效字符串</strong></p>
+<p>对于一个字符串常量，系统会先自动在所有字符后面加一个’\0’作为结束符，然后再将它储存到字符数组中</p>
+<p>字符串常量来初始化字符数组</p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c[]={<span class="string">"I am happy"</span>};</span><br><span class="line"><span class="comment">//或者省略花括号</span></span><br><span class="line"><span class="comment">//char c[]="I am happy";</span></span><br></pre></td></tr></table></figure></div>
+
+<p>注意：这样初始化，c数组的长度为11(最后还有一个’\0’)</p>
+<p>可以看到</p>
+<p><code>char c[]={"I am happy"};</code></p>
+<p>和</p>
+<p><code>char c[]={'I',' ','a','m',' ','h','a','p','p','y'};</code></p>
+<p>是<strong>不等价</strong>的</p>
+<p>而和</p>
+<p><code>char c[]={'I',' ','a','m',' ','h','a','p','p','y'，'\0'};</code></p>
+<p>是<strong>等价</strong>的</p>
+<h3 id="字符数组的输入和输出"><a href="#字符数组的输入和输出" class="headerlink" title="字符数组的输入和输出"></a>字符数组的输入和输出</h3><ol>
+<li><p>逐个字符输入输出</p>
+</li>
+<li><p>将整个字符串一次性输入或输出</p>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> s[<span class="number">10</span>];</span><br><span class="line">cin&gt;&gt;s;</span><br><span class="line">cout&lt;&lt;s;</span><br></pre></td></tr></table></figure></div>
+
+<p>如输入  </p>
+<p>penguin <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.498ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="2.07ex" role="img" focusable="false" viewBox="0 -695 1000 915"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2199" d="M126 -41Q126 -92 121 -97Q121 -98 139 -80T200 -20T281 61T394 173T517 296Q909 690 916 693Q922 695 924 695Q932 695 938 689T944 674Q944 670 943 668Q942 664 546 268Q292 13 222 -57T153 -128Q176 -123 212 -123Q310 -123 400 -179Q417 -190 417 -197Q417 -201 408 -210T394 -220Q392 -220 369 -206T302 -177T204 -162Q131 -162 67 -194Q63 -195 59 -192T55 -183Q55 -180 62 -163T78 -115T86 -45Q86 10 72 54T44 120T29 145Q29 149 38 158T52 168Q59 168 70 151Q126 62 126 -41Z"></path></g></g></g></svg></mjx-container></p>
+<p>那么s[10]={‘p’,’e’,’n’,’g’,’u’,’i’,’n’,’\0’,’\0’,’\0’}</p>
+<p>字符数组名s代表字符数组的第一个元素s[0]的地址(补充：即s是常量，不能被赋值，不能做左值)，执行<code>cout&lt;&lt;s;</code>的过程就是，从字符数组的第一个元素开始，逐个输出数组元素，直到遇到结束符’\0’为止</p>
+<p>注意：结束符’\0’不会输出</p>
+<p>如果字符数组有多个’\0’,那么遇到第一个’\0’时就会结束输出</p>
+<p>如s[10]={‘p’,’e’,’\0’,’g’,’u’,’i’,’n’,’\0’,’\0’,’\0’}</p>
+<p>那么输出</p>
+<p>pe</p>
+<h2 id="标准输入流"><a href="#标准输入流" class="headerlink" title="标准输入流"></a>标准输入流</h2><h3 id="cin"><a href="#cin" class="headerlink" title="cin"></a>cin</h3><p>空格，Tab键，换行符等空白字符作为结束符</p>
+<p>不丢结束符，即结束符仍留在键盘缓冲区中，因此可能影响后面的输入（常用getchar()或者cin.get()读取结束符来防止结束符影响后续输入）</p>
+<h3 id="cin-getline-字符数组，字符个数n，终止标识符"><a href="#cin-getline-字符数组，字符个数n，终止标识符" class="headerlink" title="cin.getline(字符数组，字符个数n，终止标识符)"></a>cin.getline(字符数组，字符个数n，终止标识符)</h3><p>换行符做为结束符</p>
+<p>如cin.getline(ch,8,’/‘) (三个参数都要写，否则会报错)</p>
+<p>作用是读入7个字符(或遇’/‘结束)，并自动加上一个’\0’共8个字符存入字符数组ch中</p>
+<p>丢结束符，即结束符不留在键盘缓冲区</p>
+<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>可以接受任意字符</p>
+<h4 id="cin-get-ch"><a href="#cin-get-ch" class="headerlink" title="cin.get(ch)"></a>cin.get(ch)</h4><p>和getchar(ch)类似</p>
+<p>可读取任意<strong>一个</strong>字符</p>
+<h4 id="cin-get-字符数组，字符个数n，终止标识符"><a href="#cin-get-字符数组，字符个数n，终止标识符" class="headerlink" title="cin.get(字符数组，字符个数n，终止标识符)"></a>cin.get(字符数组，字符个数n，终止标识符)</h4><p>读取n-1个字符(或遇结束符结束)，赋给指定的字符数组</p>
+<p>若读取成功，函数返回值1；若失败，函数返回值0</p>
+<p>不丢结束符，即结束符仍留在键盘缓冲区中</p>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>个人博客搭建（Hexo+GitHub Actions自动部署)</title>
-    <url>/2023/11/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <url>/2023/11/06/1-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<p>第一篇博客打算整理一下创建和部署个人博客的过程</p>
 <span id="more"></span>
 
@@ -61,7 +420,7 @@
 <p>  <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/blog1-3.png"
+                     data-src="/images/blog1/blog1-3.png"
                      
                 ><br>  Select scopes 勾选repo和workflow  </p>
 <p>  <strong>注意</strong>：创建的token只会显示一次，记得存好，否则只能重新创建</p>
@@ -77,13 +436,13 @@
 <li>将github-deploy-key(私钥)配置到blog仓库<br>  在 blog 仓库中:Settings-&gt;Secrets and variables-&gt;Actions-&gt;New repository secret<br> <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/blog1-1.png"
+                     data-src="/images/blog1/blog1-1.png"
                      
                 >  </li>
 <li>将github-deploy-key(私钥)配置到blog仓库<br> 在 <strong>用户名</strong>.github.io 仓库中:Settings-&gt;Deploy keys-&gt;Add deploy key<br> <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/blog1-2.png"
+                     data-src="/images/blog1/blog1-2.png"
                      
                 ></li>
 </ol>
@@ -98,6 +457,73 @@
 ]]></content>
       <categories>
         <category>网站搭建</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>质数</title>
+    <url>/2023/11/24/5-%E8%B4%A8%E6%95%B0/</url>
+    <content><![CDATA[<p>判断一个数是否为质数</p>
+<span id="more"></span>
+
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">bool</span> flag=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">2</span>;j&lt;=<span class="built_in">sqrt</span>(num);j++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(num%j==<span class="number">0</span>)&#123;</span><br><span class="line">        flag=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(flag&amp;&amp;num&gt;=<span class="number">2</span>)cout&lt;&lt;num;</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>科学计数法</title>
+    <url>/2023/11/23/3-%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95/</url>
+    <content><![CDATA[<p>科学计数法(e或E表示)</p>
+<span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th align="left">表达式</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">ae5&#x3D;a*10^5</td>
+<td align="left">1.2e5&#x3D;120000</td>
+</tr>
+<tr>
+<td align="left">ae05&#x3D;a*10^5</td>
+<td align="left">1.2e05&#x3D;120000</td>
+</tr>
+<tr>
+<td align="left">ae+05&#x3D;a*10^5</td>
+<td align="left">1.2e+05&#x3D;120000</td>
+</tr>
+<tr>
+<td align="left">ae-05&#x3D;a*10^(-5)</td>
+<td align="left">1.2e-05&#x3D;0.000012</td>
+</tr>
+<tr>
+<td align="left">ae5+0.5&#x3D;a*10^5+0.5</td>
+<td align="left">1e5+0.5&#x3D;100000.5</td>
+</tr>
+<tr>
+<td align="left">ae+05+0.5&#x3D;a*10^5+0.5</td>
+<td align="left">1e+05+0.5&#x3D;100000.5</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>鞍点</title>
+    <url>/2023/11/24/4-%E9%9E%8D%E7%82%B9/</url>
+    <content><![CDATA[<p>一个矩阵元素的’鞍点’是指该位置上的元素值在该行上最大、在该列上最小。<br>本题要求编写程序，求一个给定的n阶方阵的鞍点。</p>
+<span id="more"></span>
+
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> a[<span class="number">15</span>][<span class="number">15</span>];</span><br><span class="line">    <span class="type">int</span> flag[<span class="number">15</span>][<span class="number">15</span>];</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">            cin&gt;&gt;a[i][j];</span><br><span class="line">            flag[i][j]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="type">int</span> Max=a[i][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">2</span>;j&lt;=n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][j]&gt;Max)Max=a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][j]==Max)flag[i][j]+=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">        <span class="type">int</span> Min=a[<span class="number">1</span>][j];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][j]&lt;Min)Min=a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][j]==Min)flag[i][j]+=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(flag[i][j]==<span class="number">2</span>)cout&lt;&lt;a[i][j]&lt;&lt;<span class="string">&quot;(&quot;</span>&lt;&lt;i&lt;&lt;<span class="string">&quot;,&quot;</span>&lt;&lt;j&lt;&lt;<span class="string">&quot;)&quot;</span>&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>算法</category>
       </categories>
   </entry>
 </search>
